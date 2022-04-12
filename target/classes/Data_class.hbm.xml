@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD//EN"
+        "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <class name="com.mycompany.bookedmoneyx.client.Data_class" table="configuration">
+        <id name="SQL_ID" column="id" type="int">
+            <generator class="native"/>
+        </id>
+        <property name="SQL_Host" column="sql_host" type="string"/>
+        <property name="SQL_User" column="sql_user" type="string"/>
+        <property name="SQL_Password" column="sql_password" type="string"/>
+        <property name="SQL_DB" column="sql_db" type="string"/>        
+        <property name="PeriodType" column="period_type" type="string"/>
+        <property name="PeriodBegin" column="period_begin" type="java.util.Date"/>
+        <property name="PeriodEnd" column="period_end" type="java.util.Date"/>        
+        <property name="DefaultAccountIncomingID" column="default_account_incoming_id" type="int"/>
+        <property name="DefaultAccountOutgoingID" column="default_account_outgoing_id" type="int"/>
+        <property name="DefaultOperationType" column="default_operation_type" type="boolean"/>
+    </class>
+</hibernate-mapping>

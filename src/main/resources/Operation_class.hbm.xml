@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD//EN"
+        "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <class name="com.mycompany.bookedmoneyx.client.Operation_class" table="operations">
+        <id name="ID" column="id" type="long">
+            <generator class="native"/>
+        </id>
+        <property name="Type" column="type" type="int"/>
+        <property name="AccountIncomingID" column="account_incoming_id" type="long"/>
+        <property name="AccountOutgoingID" column="account_outgoing_id" type="long"/>
+        <property name="IsIncoming" column="is_incoming" type="boolean"/>
+        <property name="CategoryID" column="category_id" type="long"/>
+        <property name="DateTime" column="datetime" type="java.util.Date"/>
+        <property name="Description" column="description" type="string"/>
+        <property name="Amount" column="amount" type="double"/>
+    </class>
+</hibernate-mapping>
